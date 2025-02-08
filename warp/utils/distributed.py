@@ -18,6 +18,7 @@ def init(rank):
         return nranks, is_distributed
 
     ALREADY_INITALIZED = True
+    os.environ['CUDA_VISIBLE_DEVICES'] = ''
 
     if is_distributed and torch.cuda.is_available():
         num_gpus = torch.cuda.device_count()

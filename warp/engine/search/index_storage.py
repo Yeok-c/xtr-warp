@@ -85,6 +85,7 @@ class IndexScorerWARP(IndexLoaderWARP):
         t_prime=None,
         bound=128,
     ):
+        use_gpu = False
         assert not use_gpu
         assert not load_index_with_mmap
 
